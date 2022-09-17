@@ -30,6 +30,10 @@ const TaskList = () => {
         }
     }
 
+    const iscompleted = (task) => {
+        return (task.completed === true);
+    }
+
     const toggleStatus = (id) => {
         const updatedTasks = tasksList.map((task) => {
             if (task.id === id) {
@@ -45,9 +49,10 @@ const TaskList = () => {
             <TaskForm addTask={addNewTask} />
             <div className='w-100 d-flex justify-content-end'>
                 <button 
-                className='btn btn-danger btn-sm align-self-end'
-                onClick={deleteCompleted}
-            >Borrar completadas</button>
+                className={`btn btn-danger btn-sm align-self-end ${(tasksList.find(iscompleted)) ? '' : 'disabled'}`}
+                onClick={deleteCompleted}>
+                    Borrar completadas
+                </button>
             </div>
             {
                 tasksList.map((task) => {

@@ -24,16 +24,17 @@ const TaskForm = ({addTask}) => {
     }
 
     const handleChange = (e) => {
+        if(e.keyCode === 13) handleSubmit();
         setNewTaskTitle(e.target.value.trim());
     }
 
     return(
-        <div className="TaskFormContainer d-inline-flex justify-content-center">
-            <form onSubmit={handleSubmit} className=''>
+        <div className="d-inline-flex justify-content-center w-100">
+            <form onSubmit={handleSubmit} className='TaskFormContainer'>
                 <input type="text" 
                     name='newTaskInput' 
                     placeholder='Describa su tarea' 
-                    className='form-control'
+                    className='form-control w-100'
                     onChange={handleChange}
                 />
 

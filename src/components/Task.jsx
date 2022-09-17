@@ -8,7 +8,7 @@ const Task = ({id, title, completed, deleteTask, toggleStatus}) => {
     return(
         <div className={task_style} key={id}>
             <div className='col-1 h-100'>
-                <span title={id} key={id} >{id.substr(0,7)}...</span>
+                <span title={`ID: ${id}`} key={id} >{id.substr(0,7)}...</span>
             </div>            
             <div className='col-6 h-100 text-start fw-semibold'>
                 <span key={id} >{title}</span>

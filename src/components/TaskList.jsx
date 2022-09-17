@@ -15,8 +15,19 @@ const TaskList = () => {
     }
 
     const deleteTask = (id) => {
-        const updatedTasks =tasksList.filter((task) => task.id !== id);
-        setTasksList(updatedTasks)
+        const updatedTasksList =tasksList.filter((task) => task.id !== id);
+        setTasksList(updatedTasksList)
+    }
+
+    const deleteCompleted = () => {
+        if(tasksList.length !== 0){
+            const confirma = window.confirm("Seguro desea eliminar todas las tareas completadas?");
+            if(confirma){
+                const updatedTasksList = tasksList.filter((task) => !task.completed);
+                setTasksList(updatedTasksList);
+            }
+            
+        }
     }
 
     const toggleStatus = (id) => {
@@ -32,6 +43,12 @@ const TaskList = () => {
     return(
         <div>
             <TaskForm addTask={addNewTask} />
+            <div className='w-100 d-flex justify-content-end'>
+                <button 
+                className='btn btn-danger btn-sm align-self-end'
+                onClick={deleteCompleted}
+            >Borrar completadas</button>
+            </div>
             {
                 tasksList.map((task) => {
                     return(

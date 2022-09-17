@@ -34,7 +34,8 @@ const TaskForm = ({addTask}) => {
                 <input type="text" 
                     name='newTaskInput' 
                     placeholder='Describa su tarea' 
-                    className='form-control w-100'
+                    className='form-control w-100 mb-3'
+                    autoFocus
                     onChange={handleChange}
                 />
 

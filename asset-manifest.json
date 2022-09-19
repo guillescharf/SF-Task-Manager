@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SF-Task-Manager.git/static/css/main.2dc6338c.css",
+    "main.js": "/SF-Task-Manager.git/static/js/main.19b510a4.js",
+    "index.html": "/SF-Task-Manager.git/index.html",
+    "main.2dc6338c.css.map": "/SF-Task-Manager.git/static/css/main.2dc6338c.css.map",
+    "main.19b510a4.js.map": "/SF-Task-Manager.git/static/js/main.19b510a4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2dc6338c.css",
+    "static/js/main.19b510a4.js"
+  ]
+}

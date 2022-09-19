@@ -22,6 +22,7 @@ const TaskForm = ({addTask, tasksList, deleteCompleted}) => {
             alert('No puede crearse una tarea vacía');
         }
     }
+    
     const iscompleted = (task) => {
         return (task.completed === true);
     }    

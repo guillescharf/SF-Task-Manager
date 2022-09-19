@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <img src={logo} alt='App Logo' />
+        <img src={logo} alt='App Logo' className='img-fluid' />
         <h2>Mi gestor de tareas con React.js</h2>
         <TaskList />        
       </div>         

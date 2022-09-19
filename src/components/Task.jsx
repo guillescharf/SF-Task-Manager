@@ -11,15 +11,15 @@ const Task = ({id, title, completed, deleteTask, toggleStatus}) => {
             <div className='col-lg-1 col-sm-4'>
                 <span title={`ID: ${id}`} key={id} >{id.substr(0,7)}...</span>
             </div>            
-            <div className='col-lg-6 text-lg-start text-sm-center fw-semibold col-sm-8'>
+            <div className='col-lg-5 text-lg-start text-sm-center fw-semibold col-sm-8'>
                 <span key={id} >{title}</span>
-            </div>
-            <div className='col-lg-1 col-sm-6 mb-2 mb-md-0'>
-                <button onClick={ () => { deleteTask(id)}} className="btn btn-danger rounded-pill">Eliminar</button>
             </div>
             <div className='col-lg-4 col-sm-6 mb-2 mb-md-0'>
                 <button onClick={ () => { toggleStatus(id)}} title={btn_text} className={btn_class}>{btn_text}</button>
-            </div>           
+            </div>     
+            <div className='col-lg-2 col-sm-6 mb-2 mb-md-0'>
+                <button onClick={ () => { deleteTask(id)}} className="btn btn-danger rounded-pill">Eliminar</button>
+            </div>                  
         </div>
         
     );

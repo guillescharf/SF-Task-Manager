@@ -8,3 +8,7 @@
     transition: 0.5s;
 
 }
+.task span{
+    width:100%;
+    word-wrap: break-word;
+}

@@ -8,8 +8,8 @@ const Task = ({id, title, completed, deleteTask, toggleStatus}) => {
     task_style += completed && ' opacity-50 text-decoration-line-through';
     return(
         <div className={task_style} key={id}>         
-            <div className='col-lg-6 text-lg-start text-sm-center fw-semibold col-sm-12'>
-                <span title={`ID: ${id}`} key={id}  className="overflow-auto mt-xs-5 mt-md-1" >{title}</span>
+            <div className='col-lg-6 text-lg-start text-sm-center fw-semibold col-sm-12  pt-25 pt-md-1'>
+                <span title={`ID: ${id}`} key={id}  className="overflow-auto " >{title}</span>
             </div>
             <div className='col-lg-4 col-sm-6 mb-2 mb-md-0'>
                 <button onClick={ () => { toggleStatus(id)}} title={btn_text} className={btn_class}>{btn_text}</button>

@@ -2,6 +2,7 @@
     margin: 20px;
     padding: 5px;
     transition: 0.5s;
+    cursor:pointer ;
 }
 .task:hover{
     box-shadow: 10px 10px 8px 0 rgba(0, 0, 0, 0.2);
